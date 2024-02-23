@@ -1,0 +1,184 @@
+#:import Button kivy.uix.button.Button
+
+WindowManager:
+    MainWindow:
+    main_menu:
+
+<MainWindow>:
+
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'menu.png'
+    name: "menu"
+
+
+
+    GridLayout:
+        cols: 3
+        padding: [10, 0, 10, 0]
+
+        Button:
+            text: ""
+            background_color: (1, 0.412, 0.706, 0)
+        GridLayout:
+            rows: 3
+
+            Button:
+                text: ""
+                background_color: (1, 0.412, 0.706, 0)
+
+            Button:
+                text: ""
+                background_color: (1, 0.412, 0.706, 0)
+
+            BoxLayout:
+                padding: [0, 0, 0, 100]
+                Button:
+                    font_size: 75
+                    text: "Menu"
+                    background_color: (1, 0.412, 0.706, 0)
+                    on_press:
+                        root.press()
+                    on_release:
+                        root.release()
+                        app.root.current = "main_menu"
+                        root.manager.transition.direction = "up"
+
+        GridLayout:
+            rows: 5
+            cols: 2
+
+            Button:
+                text: ""
+                background_color: (1, 0.412, 0.706, 0)
+
+            Button:
+                text: ""
+                background_normal: "settings.jpg"
+                background_down: "main_menu.jpg"
+                on_press:
+                    root.press()
+                on_release:
+                    root.release()
+
+            Button:
+                text: ""
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                text: ""
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                text: ""
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                text: ""
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                text: ""
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                text: ""
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                text: ""
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                text: ""
+                background_color: (1, 0.412, 0.706, 0)
+
+
+
+<main_menu>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'main_menu.jpg'
+    name: "main_menu"
+
+    on_enter: root.music()
+
+    GridLayout:
+        cols: 3
+
+        Button:
+            text: ""
+            background_color: (1, 0.412, 0.706, 0)
+        GridLayout:
+            rows: 2
+
+            Button:
+                text: ""
+                background_color: (1, 0.412, 0.706, 0)
+
+            GridLayout:
+                rows: 3
+                padding: [0, 50, 0, 0]
+
+                Button:
+                    text: "Textbook"
+                    background_color: (1, 0.412, 0.706, 0.35)
+                    on_press:
+                        root.press()
+                    on_release:
+                        root.release()
+
+                Button:
+                    text: "Tutorial mode"
+                    background_color: (1, 0.412, 0.706, 0.35)
+                    on_press:
+                        root.press()
+                    on_release:
+                        root.release()
+
+                Button:
+                    text: "Challenge mode"
+                    background_color: (1, 0.412, 0.706, 0.35)
+                    on_press:
+                        root.press()
+                    on_release:
+                        root.release()
+
+        GridLayout:
+            rows: 5
+            cols: 2
+
+            Button:
+                text: ""
+                background_color: (1, 0.412, 0.706, 0)
+
+            Button:
+                text: ""
+                background_normal: "settings.jpg"
+                background_down: "main_menu.jpg"
+                on_press:
+                    root.press()
+                on_release:
+                    root.release()
+
+            Button:
+                text: ""
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                text: ""
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                text: ""
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                text: ""
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                text: ""
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                text: ""
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                text: ""
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                text: ""
+                background_color: (1, 0.412, 0.706, 0)
