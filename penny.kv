@@ -10,10 +10,8 @@ WindowManager:
         Rectangle:
             pos: self.pos
             size: self.size
-            source: 'menu.png'
+            source: 'menu.jpg'
     name: "menu"
-
-
 
     GridLayout:
         cols: 3
@@ -22,6 +20,7 @@ WindowManager:
         Button:
             text: ""
             background_color: (1, 0.412, 0.706, 0)
+
         GridLayout:
             rows: 3
 
@@ -36,8 +35,13 @@ WindowManager:
             BoxLayout:
                 padding: [0, 0, 0, 100]
                 Button:
-                    font_size: 75
-                    text: "Menu"
+                    font_size: 105
+                    font_name: "Ebrima"
+                    text: "Start"
+                    bold: True
+                    color: 0, 0, 102, 1
+                    #background_normal: "start.png"
+                    #background_down: "start.png"
                     background_color: (1, 0.412, 0.706, 0)
                     on_press:
                         root.press()
@@ -47,58 +51,93 @@ WindowManager:
                         root.manager.transition.direction = "up"
 
         GridLayout:
-            rows: 5
-            cols: 2
+            rows: 10
+            cols: 4
 
             Button:
-                text: ""
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
                 background_color: (1, 0.412, 0.706, 0)
 
             Button:
-                text: ""
-                background_normal: "settings.jpg"
-                background_down: "main_menu.jpg"
+                size_hint: 0.05, 0.05
+                background_normal: "settingsb.jpg"
+                background_down: "settings.jpg"
+
                 on_press:
                     root.press()
                 on_release:
                     root.release()
 
+
             Button:
-                text: ""
                 background_color: (1, 0.412, 0.706, 0)
             Button:
-                text: ""
                 background_color: (1, 0.412, 0.706, 0)
             Button:
-                text: ""
                 background_color: (1, 0.412, 0.706, 0)
             Button:
-                text: ""
                 background_color: (1, 0.412, 0.706, 0)
             Button:
-                text: ""
                 background_color: (1, 0.412, 0.706, 0)
             Button:
-                text: ""
                 background_color: (1, 0.412, 0.706, 0)
             Button:
-                text: ""
                 background_color: (1, 0.412, 0.706, 0)
             Button:
-                text: ""
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
                 background_color: (1, 0.412, 0.706, 0)
 
 
 
 <main_menu>:
+
     canvas.before:
         Rectangle:
             pos: self.pos
             size: self.size
-            source: 'main_menu.jpg'
+            source: 'menu.jpg'
+
     name: "main_menu"
 
-    on_enter: root.music()
+    #on_enter: root.music()
 
     GridLayout:
         cols: 3
@@ -115,11 +154,15 @@ WindowManager:
 
             GridLayout:
                 rows: 3
-                padding: [0, 50, 0, 0]
+                padding: [0, 40, 0, 70]
 
                 Button:
                     text: "Textbook"
-                    background_color: (1, 0.412, 0.706, 0.35)
+                    color: 0, 0, 102, 1
+                    font_size: 50
+                    font_name: "Ebrima"
+                    bold: True
+                    background_color: (1, 0.412, 0.706, 0)
                     on_press:
                         root.press()
                     on_release:
@@ -127,7 +170,13 @@ WindowManager:
 
                 Button:
                     text: "Tutorial mode"
-                    background_color: (1, 0.412, 0.706, 0.35)
+                    color: 0, 0, 102, 1
+                    font_size: 50
+                    font_name: "Ebrima"
+                    bold: True
+                    #background_normal: "tutorial.png"
+                    #background_down: "tutorial.png"
+                    background_color: (1, 0.412, 0.706, 0)
                     on_press:
                         root.press()
                     on_release:
@@ -135,50 +184,86 @@ WindowManager:
 
                 Button:
                     text: "Challenge mode"
-                    background_color: (1, 0.412, 0.706, 0.35)
+                    color: 0, 0, 102, 1
+                    font_size: 50
+                    font_name: "Ebrima"
+                    bold: True
+                    background_color: (1, 0.412, 0.706, 0)
                     on_press:
                         root.press()
                     on_release:
                         root.release()
 
         GridLayout:
-            rows: 5
-            cols: 2
+            rows: 10
+            cols: 4
 
             Button:
-                text: ""
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
                 background_color: (1, 0.412, 0.706, 0)
 
             Button:
-                text: ""
-                background_normal: "settings.jpg"
-                background_down: "main_menu.jpg"
+                size_hint: 0.05, 0.05
+                background_normal: "settingsb.jpg"
+                background_down: "settings.jpg"
+
                 on_press:
                     root.press()
                 on_release:
                     root.release()
 
             Button:
-                text: ""
                 background_color: (1, 0.412, 0.706, 0)
             Button:
-                text: ""
                 background_color: (1, 0.412, 0.706, 0)
             Button:
-                text: ""
                 background_color: (1, 0.412, 0.706, 0)
             Button:
-                text: ""
                 background_color: (1, 0.412, 0.706, 0)
             Button:
-                text: ""
                 background_color: (1, 0.412, 0.706, 0)
             Button:
-                text: ""
                 background_color: (1, 0.412, 0.706, 0)
             Button:
-                text: ""
                 background_color: (1, 0.412, 0.706, 0)
             Button:
-                text: ""
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
+                background_color: (1, 0.412, 0.706, 0)
+            Button:
                 background_color: (1, 0.412, 0.706, 0)
