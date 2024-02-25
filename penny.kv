@@ -211,7 +211,7 @@ WindowManager:
         Rectangle:
             pos: self.pos
             size: self.size
-            source: 'textbook.png'
+            source: 'tutorial_1.png'
 
     RelativeLayout:
 
@@ -281,6 +281,32 @@ WindowManager:
 
             size_hint: 0.6, 0.6
             pos: (root.width/3, 1.1*root.height/3)
+
+        Label:
+            color: (0, 0, 0, 1)
+            text: "Secondhand smoke kills, you know. It's far worse than the fumes you inhale directly. Take diethylene, one of those nasty carcinogens your doctor might have warned you about on your last visit. Firsthand smoke has between 5.3 and 43 nanograms of diethylene, whereas, secondhand smoke has 680 and 823 nanograms. Then we've got quinoline, another effective one, secondhand smoke has 18,000 nanograms; 11 times more than the amount you're sucking down firsthand. You can make the choice to blacken your lungs, but don't expect to enforce that on me."
+            text_size: self.width, None
+            font_size: root.height/35
+
+            size_hint: 0.85, 0.35
+            pos: (root.width/9, root.height/13)
+
+        Label:
+            color: (0, 0, 0, 1)
+            text: "Penny N."
+            text_size: self.width, None
+            font_size: root.height/40
+
+            size_hint: 0.1, 0.05
+            pos: (root.width/6.5, root.height/2.5)
+
+            canvas.before:
+                PushMatrix
+                Rotate:
+                    angle: 25
+                    origin: self.center
+            canvas.after:
+                PopMatrix
 
 <textbook2>:
     name: "textbook2"
@@ -352,6 +378,16 @@ WindowManager:
                 root.manager.transition.direction = "right"
 
         Label:
+            size_hint: 0.3, 0.6
+            pos: (root.width/65, root.height/2.5)
+
+            canvas.before:
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+                    source: 'penni_ult.png'
+
+        Label:
             color: (0, 0, 0, 1)
             text: "Secondhand smoke kills, you know. It's far worse than the fumes you inhale directly. Take diethylene, one of those nasty carcinogens your doctor might have warned you about on your last visit. Firsthand smoke has between 5.3 and 43 nanograms of diethylene, whereas, secondhand smoke has 680 and 823 nanograms. Then we've got quinoline, another effective one, secondhand smoke has 18,000 nanograms; 11 times more than the amount you're sucking down firsthand. You can make the choice to blacken your lungs, but don't expect to enforce that on me. Secondhand smoke kills, you know. It's far worse than the fumes you inhale directly. Take diethylene, one of those nasty carcinogens your doctor might have warned you about on your last visit. Firsthand smoke has between 5.3 and 43 nanograms of diethylene, whereas, secondhand smoke has 680 and 823 nanograms. Then we've got quinoline, another effective one, secondhand smoke has 18,000 nanograms; 11 times more than the amount you're sucking down firsthand. You can make the choice to blacken your lungs, but don't expect to enforce that on me."
             text_size: self.width, None
@@ -359,3 +395,30 @@ WindowManager:
 
             size_hint: 0.6, 0.6
             pos: (root.width/3, 1.1*root.height/3)
+
+        Label:
+            color: (0, 0, 0, 1)
+            text: "Secondhand smoke kills, you know. It's far worse than the fumes you inhale directly. Take diethylene, one of those nasty carcinogens your doctor might have warned you about on your last visit. Firsthand smoke has between 5.3 and 43 nanograms of diethylene, whereas, secondhand smoke has 680 and 823 nanograms. Then we've got quinoline, another effective one, secondhand smoke has 18,000 nanograms; 11 times more than the amount you're sucking down firsthand. You can make the choice to blacken your lungs, but don't expect to enforce that on me."
+            text_size: self.width, None
+            font_size: root.height/35
+
+            size_hint: 0.85, 0.35
+            pos: (root.width/9, root.height/13)
+
+        Label:
+            color: (0, 0, 0, 1)
+            text: "Penny N."
+            text_size: self.width, None
+            font_size: root.height/40
+
+            size_hint: 0.1, 0.05
+            pos: (root.width/6.5, root.height/2.5)
+
+            canvas.before:
+                PushMatrix
+                Rotate:
+                    angle: 25
+                    origin: self.center
+            canvas.after:
+                PopMatrix
+
