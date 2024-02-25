@@ -14,19 +14,7 @@ try:
 except:
     print('DB exists')
 
-class MainWindow(Screen):
-
-    def press(self):
-        sound = SoundLoader.load('tehe.mp3')
-        if sound:
-            sound.play()
-
-    def release(self):
-        sound = SoundLoader.load('senpai.mp3')
-        if sound:
-            sound.play()
-
-class main_menu(Screen):
+class Sounds():
 
     def music(self):
         sound = SoundLoader.load('bongos.mp3')
@@ -34,14 +22,55 @@ class main_menu(Screen):
             sound.play()
 
     def press(self):
-        sound = SoundLoader.load('tehe.mp3')
+        sound = SoundLoader.load('press.mp3')
         if sound:
             sound.play()
 
     def release(self):
-        sound = SoundLoader.load('senpai.mp3')
+        sound = SoundLoader.load('release.mp3')
         if sound:
             sound.play()
+
+class MainWindow(Screen):
+
+    def press(self):
+        Sounds.press(self)
+
+    def release(self):
+        Sounds.release(self)
+
+class main_menu(Screen):
+
+    def music(self):
+        Sounds.music(self)
+
+    def press(self):
+        Sounds.press(self)
+
+    def release(self):
+        Sounds.release(self)
+
+class textbook1(Screen):
+
+    def music(self):
+        Sounds.music(self)
+
+    def press(self):
+        Sounds.press(self)
+
+    def release(self):
+        Sounds.release(self)
+
+class textbook2(Screen):
+
+    def music(self):
+        Sounds.music(self)
+
+    def press(self):
+        Sounds.press(self)
+
+    def release(self):
+        Sounds.release(self)
 
 class WindowManager(ScreenManager):
     pass
