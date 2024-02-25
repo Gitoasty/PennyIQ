@@ -3,6 +3,11 @@
 WindowManager:
     MainWindow:
     main_menu:
+    textbook1:
+    textbook2:
+
+<Button>:
+    background_color: (1, 0.412, 0.706, 0)
 
 <MainWindow>:
 
@@ -18,31 +23,23 @@ WindowManager:
         padding: [10, 0, 10, 0]
 
         Button:
-            text: ""
-            background_color: (1, 0.412, 0.706, 0)
 
         GridLayout:
             rows: 3
 
             Button:
-                text: ""
-                background_color: (1, 0.412, 0.706, 0)
-
             Button:
-                text: ""
-                background_color: (1, 0.412, 0.706, 0)
 
             BoxLayout:
                 padding: [0, 0, 0, 100]
                 Button:
-                    font_size: 105
+                    #font_size: 105
+                    font_size: root.height/5
                     font_name: "Ebrima"
                     text: "Start"
                     bold: True
                     color: 0, 0, 102, 1
-                    #background_normal: "start.png"
-                    #background_down: "start.png"
-                    background_color: (1, 0.412, 0.706, 0)
+
                     on_press:
                         root.press()
                     on_release:
@@ -55,14 +52,13 @@ WindowManager:
             cols: 4
 
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
 
             Button:
                 size_hint: 0.05, 0.05
+
+                background_color: (1, 1, 1, 1)
                 background_normal: "settingsb.jpg"
                 background_down: "settings.jpg"
 
@@ -73,59 +69,31 @@ WindowManager:
 
 
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
-
-
 
 <main_menu>:
 
@@ -143,14 +111,11 @@ WindowManager:
         cols: 3
 
         Button:
-            text: ""
-            background_color: (1, 0.412, 0.706, 0)
+
         GridLayout:
             rows: 2
 
             Button:
-                text: ""
-                background_color: (1, 0.412, 0.706, 0)
 
             GridLayout:
                 rows: 3
@@ -167,6 +132,8 @@ WindowManager:
                         root.press()
                     on_release:
                         root.release()
+                        app.root.current = "textbook1"
+                        root.manager.transition.direction = "left"
 
                 Button:
                     text: "Tutorial mode"
@@ -174,8 +141,6 @@ WindowManager:
                     font_size: 50
                     font_name: "Ebrima"
                     bold: True
-                    #background_normal: "tutorial.png"
-                    #background_down: "tutorial.png"
                     background_color: (1, 0.412, 0.706, 0)
                     on_press:
                         root.press()
@@ -199,14 +164,12 @@ WindowManager:
             cols: 4
 
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
 
             Button:
                 size_hint: 0.05, 0.05
+                background_color: (1, 1, 1, 1)
                 background_normal: "settingsb.jpg"
                 background_down: "settings.jpg"
 
@@ -216,54 +179,183 @@ WindowManager:
                     root.release()
 
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
             Button:
-                background_color: (1, 0.412, 0.706, 0)
-            Button:
-                background_color: (1, 0.412, 0.706, 0)
+
+<textbook1>:
+    name: "textbook1"
+
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'textbook.png'
+
+    RelativeLayout:
+
+        Button:
+            background_color: (1, 1, 1, 1)
+            background_normal: "settingsb.jpg"
+            background_down: "settings.jpg"
+
+            size_hint: 0.1, 0.1
+            pos: (9*root.width/10, 9*root.height/10)
+
+            on_press:
+                root.press()
+            on_release:
+                root.release()
+
+        Button:
+            background_color: (1, 1, 1, 1)
+            background_normal: "leftarrow.jpg"
+            background_down: "leftarrow.jpg"
+
+            size_hint: 0.1, 0.1
+            pos: (root.width/40, root.height/40)
+
+            on_press:
+                root.press()
+            on_release:
+                root.release()
+                app.root.current = "main_menu"
+                root.manager.transition.direction = "right"
+
+        Button:
+            background_color: (1, 1, 1, 1)
+            background_normal: "rightarrow.jpg"
+            background_down: "rightarrow.jpg"
+
+            size_hint: 0.1, 0.1
+            pos: (9*root.width/10, root.height/40)
+
+            on_press:
+                root.press()
+            on_release:
+                root.release()
+                app.root.current = "textbook2"
+                root.manager.transition.direction = "left"
+
+        Button:
+            background_color: (1, 1, 1, 1)
+            background_normal: "menusic.jpg"
+            background_down: "menusic.jpg"
+
+            size_hint: 0.1, 0.1
+            pos: (root.width/40, 9*root.height/10)
+
+            on_press:
+                root.press()
+            on_release:
+                root.release()
+                app.root.current = "main_menu"
+                root.manager.transition.direction = "right"
+
+        Label:
+            color: (0, 0, 0, 1)
+            text: "Secondhand smoke kills, you know. It's far worse than the fumes you inhale directly. Take diethylene, one of those nasty carcinogens your doctor might have warned you about on your last visit. Firsthand smoke has between 5.3 and 43 nanograms of diethylene, whereas, secondhand smoke has 680 and 823 nanograms. Then we've got quinoline, another effective one, secondhand smoke has 18,000 nanograms; 11 times more than the amount you're sucking down firsthand. You can make the choice to blacken your lungs, but don't expect to enforce that on me. Secondhand smoke kills, you know. It's far worse than the fumes you inhale directly. Take diethylene, one of those nasty carcinogens your doctor might have warned you about on your last visit. Firsthand smoke has between 5.3 and 43 nanograms of diethylene, whereas, secondhand smoke has 680 and 823 nanograms. Then we've got quinoline, another effective one, secondhand smoke has 18,000 nanograms; 11 times more than the amount you're sucking down firsthand. You can make the choice to blacken your lungs, but don't expect to enforce that on me."
+            text_size: self.width, None
+            font_size: root.height/40
+
+            size_hint: 0.6, 0.6
+            pos: (root.width/3, 1.1*root.height/3)
+
+<textbook2>:
+    name: "textbook2"
+
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'textbook.png'
+
+    RelativeLayout:
+
+        Button:
+            background_color: (1, 1, 1, 1)
+            background_normal: "settingsb.jpg"
+            background_down: "settings.jpg"
+
+            size_hint: 0.1, 0.1
+            pos: (9*root.width/10, 9*root.height/10)
+
+            on_press:
+                root.press()
+            on_release:
+                root.release()
+
+        Button:
+            background_color: (1, 1, 1, 1)
+            background_normal: "leftarrow.jpg"
+            background_down: "leftarrow.jpg"
+
+            size_hint: 0.1, 0.1
+            pos: (root.width/40, root.height/40)
+
+            on_press:
+                root.press()
+            on_release:
+                root.release()
+                app.root.current = "textbook1"
+                root.manager.transition.direction = "right"
+
+        Button:
+            background_color: (1, 1, 1, 1)
+            background_normal: "rightarrow.jpg"
+            background_down: "rightarrow.jpg"
+
+            size_hint: 0.1, 0.1
+            pos: (9*root.width/10, root.height/40)
+
+            on_press:
+                root.press()
+            on_release:
+                root.release()
+                app.root.current = "textbook1"
+                root.manager.transition.direction = "right"
+
+        Button:
+            background_color: (1, 1, 1, 1)
+            background_normal: "menusic.jpg"
+            background_down: "menusic.jpg"
+
+            size_hint: 0.1, 0.1
+            pos: (root.width/40, 9*root.height/10)
+
+            on_press:
+                root.press()
+            on_release:
+                root.release()
+                app.root.current = "main_menu"
+                root.manager.transition.direction = "right"
+
+        Label:
+            color: (0, 0, 0, 1)
+            text: "Secondhand smoke kills, you know. It's far worse than the fumes you inhale directly. Take diethylene, one of those nasty carcinogens your doctor might have warned you about on your last visit. Firsthand smoke has between 5.3 and 43 nanograms of diethylene, whereas, secondhand smoke has 680 and 823 nanograms. Then we've got quinoline, another effective one, secondhand smoke has 18,000 nanograms; 11 times more than the amount you're sucking down firsthand. You can make the choice to blacken your lungs, but don't expect to enforce that on me. Secondhand smoke kills, you know. It's far worse than the fumes you inhale directly. Take diethylene, one of those nasty carcinogens your doctor might have warned you about on your last visit. Firsthand smoke has between 5.3 and 43 nanograms of diethylene, whereas, secondhand smoke has 680 and 823 nanograms. Then we've got quinoline, another effective one, secondhand smoke has 18,000 nanograms; 11 times more than the amount you're sucking down firsthand. You can make the choice to blacken your lungs, but don't expect to enforce that on me."
+            text_size: self.width, None
+            font_size: root.height/40
+
+            size_hint: 0.6, 0.6
+            pos: (root.width/3, 1.1*root.height/3)
